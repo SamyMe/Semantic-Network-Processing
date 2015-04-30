@@ -34,6 +34,7 @@ m2=[]
 
 m1.append(question[0])
 m2.append(question[2])
+relation = question[1]
 
 dontstop=True
 
@@ -55,7 +56,7 @@ while dontstop:
 	for element in m2:
 		for tupl in graph["is_a"]:
 			if element == tupl[1] and not (tupl[0] in m2):
-				m2.append(tupl[0])
+				m1.append(tupl[0])
 				dontstop=True
 print "M1 propagé"
 print m2
@@ -64,15 +65,22 @@ print "\n"
 solution=[]
 for a in m1:
 	for b in m2:
-		if (a,b) in graph[question[1]]:
+		if (a,b) in graph[relation]:
 			solution.append((a,b))
-
 if len(solution)==0:
-	print "Il n y a pas de solution"
+	print "La réponse à la question <"+question+"> est : Non"
 else:
-	print "Solutions:"
+	print "La réponse à la question <"+question+"> est : Oui car :"
 	for (a,b) in solution:
+
+		if a != relation[0]:
+			print a+" est un "+relation[0]
+			print "et"
+		if b != relation[2]:
+			print b+" est un "+relation[2]
+			print "et"
 		print a+" "+relation+" "+b
+		print "--------------------------"
 
 
 
