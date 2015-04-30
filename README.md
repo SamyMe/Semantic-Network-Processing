@@ -18,6 +18,9 @@ For our example, the statements would be as follows:
 - Chinese eat Grasshopper
 - Grasshopper is_a Insect
 
+It is very important to keep the exact same spelling for relations and actors.
+Also, *is_a* needs to be in this exact spelling.
+
 This will creat the following graph structur:
 
 ```python
