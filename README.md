@@ -25,4 +25,4 @@ This will creat the following graph structur:
 ```
 
 In order to answer the question "Which Humans eat Insects" we write : Human eat Insect.
-The answer is given to us as: <<Chinese eat Grasshopper>> since chinese are Human, and Grasshoppers are insects.
+The answer is given to us as: < **Chinese eat Grasshopper** > since chinese are Human, and Grasshoppers are insects.
