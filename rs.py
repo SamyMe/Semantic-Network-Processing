@@ -57,7 +57,7 @@ while dontstop:
 			if element == tupl[1] and not (tupl[0] in m2):
 				m2.append(tupl[0])
 				dontstop=True
-print "M1 propagé"
+print "M2 propagé"
 print m2
 print "\n"
 
@@ -72,7 +72,7 @@ if len(solution)==0:
 else:
 	print "Solutions:"
 	for (a,b) in solution:
-		print a+" "+relation+" "+b
+		print a+" "+question[1]+" "+b
 
 
 
